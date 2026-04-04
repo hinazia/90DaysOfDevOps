@@ -3,10 +3,10 @@
       Now the practical implementation of it was done and it is called TCP/IP and this is implemented in four layers.
 
 **Where IP, TCP/UDP, HTTP/HTTPS, DNS sit in the stack----- TCP/OSI** 
-      IP      -----> Layer 3/5 (Internet Layer)
+      IP      -----> Layer 3/3 (Internet Layer)
       TCP/UDP -----> Layer 2/4 (Transport Layer)
       HTTP/HTTPS ---> Layer 1/7 (Application Layer)
-      DNS ----------> Layer 4/1 (Network Access/Physical layer)
+      DNS ----------> Layer 1/7 (Network Access/Physical layer)
 
 **Hands-on Checklist**
 1.Identity: hostname -I (or ip addr show) — note your IP.
@@ -36,16 +36,19 @@
   1 Established , 7 Listening
 
 8. Which command gives you the fastest signal when something is broken?
-   ping Host reachable or not, Latency, Packet loss
-   dig helps check DNS issues
-   curl -I helps check whether the web server responds
    traceroute helps locate where the path breaks
    
 10. What layer (OSI/TCP-IP) would you inspect next if DNS fails? If HTTP 500 shows up?
-    Network Access Layer , Application layer (HTTP error)
+     Application layer
     
 12. Two follow-up checks you’d run in a real incident.
-    Will look up the layer where the error is arising from and executing the command accordingly
+    ping → check connectivity
+    nslookup → check DNS
+    curl -I → check HTTP status quickly
+    curl -v → see detailed request/response
+    traceroute → see where network path fails
+
+    An HTTP 500 means the server is reachable but has an internal server-side problem.
     
 
 
