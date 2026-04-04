@@ -74,3 +74,10 @@ Answer in 2–3 lines each:
   Is my device IP allowed on the network or not. Since Databases can only be accsses through private IPs or over a private network,
   so I have to check whether my device IP has permisiion to access it or not
 
+ss -tulpn
+-t = TCP
+-u = UDP
+-l = Listening sockets
+-p = Show process using the socket
+-n = Show numeric addresses/ports instead of names
+
