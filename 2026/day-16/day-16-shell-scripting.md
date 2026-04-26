@@ -1,6 +1,5 @@
 ### Document: What happens if you remove the shebang line?
-  There is no affect on program. Just it tells which shell version the script is for.
-  example Bash(Ubuntu), zsh(Mac), corn etc
+   It ensures that the correct version of interpretor is used. example Bash(Ubuntu), zsh(Mac), corn etc
 
 ### Try using single quotes vs double quotes — what's the difference?
     In double quotes, we can input variables and in single quotes, variables are treated as strings(like no variable can be used). 
