@@ -1,17 +1,17 @@
 ## Task 1 and 2 : For and While Loop
-  # Loops through a list of 5 fruits
+  ### Loops through a list of 5 fruits
   #!/bin/bash
   fruits=(apple banana grapes cheery pineapple)
   for fruit in ${fruits[@]}; do
           echo $fruit
   done
-  # Prints numbers 1 to 10 using a for loop
+  ### Prints numbers 1 to 10 using a for loop
   count=1
   while [ $count -le 10 ]; do
           echo "Count is : $count"
           ((count++))
   done  
-  # Counts down to 0 using a while loop
+  ### Counts down to 0 using a while loop
   read -p "Enter the Number : " NUM
   while [ $NUM -ge 0 ]; do
           echo $NUM
@@ -20,7 +20,7 @@
   echo "Done"
 
 ## Task 3: Command-Line Arguments
-# Create greet.sh that:
+### Create greet.sh that:
 #!/bin/bash
 if [ $# -eq 0 ]
 then
@@ -29,7 +29,7 @@ then
 fi
 echo "Hello $1"
 
-# Create args_demo.sh that:
+### Create args_demo.sh that:
 #!/bin/bash
 echo "Hellooo $1 $2 $3"
 echo "Total Number of Arguments : $#"
@@ -57,7 +57,7 @@ set -e
 mkdir /tmp/devops-test || echo "directory already exists" (either set e or || statement for error handling. Both acnnot be used together)
 touch /tmp/file1.txt
 
-What you learned (3 key points)
+## What you learned (3 key points)
 - Arguments and their application
 - Error handling in shell script
 - Variables in quotes to avoid code breaking eg package="My Package", the value of package can be treated as two arguments instead of one word
