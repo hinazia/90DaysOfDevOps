@@ -1,6 +1,6 @@
-**Process commands / Service commands/ Log commands / One service on your system WorkFlow**
+## Process commands / Service commands/ Log commands / One service on your system WorkFlow
 
-(Example 01)
+### Example 01
 
                   Commands .................... Outputs
 
@@ -14,7 +14,7 @@
                   journalctl -u nginx .......... no entries (because nginx spelling was wrong. Logs were shown once spelling was corrected)
                 
 
-(Example 02)
+### Example 02
 
 ubuntu@ip-172-31-43-236:~$ top | grep nginx (no output, does not work)
 ubuntu@ip-172-31-43-236:~$ ps aux | grep nginx
@@ -24,7 +24,7 @@ www-data     609  0.0  0.5  12892  4676 ?        S    20:28   0:00 nginx: worker
 ubuntu      2052  0.0  0.2   7084  2204 pts/0    S+   21:23   0:00 grep --color=auto nginx
 ubuntu@ip-172-31-43-236:~$ htop | grep nginx ((no output, does not work))
 
-(Example 03)
+### Example 03
 
 ubuntu@ip-172-31-43-236:~$ tail -n 2 /etc/passwd
 hina:x:1003:1003::/home/hina:/usr/bin/bash
