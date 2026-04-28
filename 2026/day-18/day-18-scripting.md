@@ -41,7 +41,7 @@ set -o pipefail will not work and script will continue running)
 mkdir scripts
 echo $name
 
-# Document: What does each flag do?
+### Document: What does each flag do?
 set -e → mkdir: cannot create directory ‘scripts’: File exists
 set -u →  name: unbound variable 
 set -o pipefail → mkdir: cannot create directory ‘scripts’: File exists (Pipeline fails)
@@ -65,7 +65,7 @@ local_func ----> Hina
 func ----------> Student
 echo $name -----> no output
 echo $job -------> Student
-### without local keyword, variables have global scope in bash 
+Without local keyword, variables have global scope in bash 
 
 ## Task 5: Build a Script — System Info Reporter
 #!/bin/bash
