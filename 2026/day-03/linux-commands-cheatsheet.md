@@ -16,7 +16,7 @@ vim -------> create file and opens it in Vim editor
 rm -rfv --------> remove files
 ls --------> Lists files and folders ---> -l (lists all files folders), -a (lists the hidden . files and folders also)
 cp -rfv <source> <destination>--------> copy file
-
+stat <filename> -----> gives the file info
 ## Networking troubleshooting
 ss ----> utility to investigate sockets
 -t → TCP sockets
