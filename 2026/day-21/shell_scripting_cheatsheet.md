@@ -139,26 +139,27 @@
       9. head / tail — first/last N lines, follow mode
       
 ## Task 6: Useful Patterns and One-Liners
-
-Include at least 5 real-world one-liners you find useful. Examples:
-1. Find and delete files older than N days
-    find <path> -type f -name ".*gz" -mtime +30 -delete 
-2. Count lines in all .log files
-    wc l ".*log"
-3. Check if a service is running
-    systemctl is-enabled / is-active nginx
-4. Monitor disk usage with alerts
-      usage=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
-  if [ "$usage" -gt 80 ]; then
-    echo "ALERT: Disk usage exceeded 80%"
-  fi
-5. Parse CSV or JSON from command line
-6. Replace a string across multiple files
-7. Tail a log and filter for errors in real time
-    tail -f logfile.log | grep --line-buffered "ERROR"
-      tail -f → follows the log in real time
-      grep → filters only lines containing "ERROR"
-      --line-buffered → shows matches immediately without delay
+            
+            Include at least 5 real-world one-liners you find useful. Examples:
+            1. Find and delete files older than N days
+                find <path> -type f -name ".*gz" -mtime +30 -delete 
+            2. Count lines in all .log files
+                wc l ".*log"
+            3. Check if a service is running
+                systemctl is-enabled / is-active nginx
+            4. Monitor disk usage with alerts
+                  usage=$(df / | awk 'NR==2 {print $5}' | tr -d '%')
+              if [ "$usage" -gt 80 ]; then
+                echo "ALERT: Disk usage exceeded 80%"
+              fi
+            5. Parse CSV or JSON from command line
+               py log_analyzer_cli.py --file app.log --out output.json
+            7. Replace a string across multiple files
+            8. Tail a log and filter for errors in real time
+                tail -f logfile.log | grep --line-buffered "ERROR"
+                  tail -f → follows the log in real time
+                  grep → filters only lines containing "ERROR"
+                  --line-buffered → shows matches immediately without delay
 
 ## Task 7: Error Handling and Debugging
 
