@@ -80,8 +80,8 @@
    command | while read -r line; do
     echo "$line"
 done
-#read -r prevents backslash escaping issues.
-````
+read -r prevents backslash escaping issues.
+   ````
 
 ## Task 4: Functions
 
