@@ -61,3 +61,18 @@
     so I stash (keeping it aside) my work, fixed tge bug, stash pop and will resume my work.
     
 ## Task 5: Cherry Picking
+
+#### Answer in your notes:
+
+1. What does cherry-pick do?
+  - Pick the specific commit which is needed (picking only the top cheer not the whole cake)
+    
+2. When would you use cherry-pick in a real project?
+  - When we have different multiple features/commits eg login, signup and we want only one specific commit/feature in other branch
+    
+3. What can go wrong with cherry-picking?
+   - cherry picking the commits which are dependent on other commits. an error will be thrown as shown below
+   - Solution : try to pick the independent small commits or cherry pick the whole range
+     <img width="973" height="186" alt="image" src="https://github.com/user-attachments/assets/795bfed4-d202-4f36-bb3e-1d3827501b4c" />
+
+
