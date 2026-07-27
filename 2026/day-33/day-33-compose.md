@@ -5,8 +5,8 @@ Write a docker-compose.yml that runs:
   - A WordPress container
   - A MySQL container
 
-´´´´
-services:
+```
+  services:
   wordpress:
     depends_on: 
       - db
@@ -25,5 +25,7 @@ services:
     
 volumes:
   my-db-volume:
+
+```
+
   
- ´´´´   
