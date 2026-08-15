@@ -1,0 +1,36 @@
+### Task 4 and Task 5
+
+#### Matrix and Fail fast
+
+```
+name: Matrix Build workflow
+
+on: push
+       
+jobs:
+    matrix:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                python-version: ["3.10", "3.11", "3.12"]
+                os-version: ["ubuntu", "windows"]
+                exclude: 
+                    - os-version: windows  
+                      python-version: "3.10"
+
+        steps:
+            - uses: actions/checkout@v6
+            - name: Setup Python
+              uses: actions/setup-python@v6
+              with:
+                python-version: ${{ matrix.python-version }}
+            - name: Print Versions
+              run: python --version
+            - name: Print OS Versions
+              run: echo ${{ matrix.os-version }}
+            - name: Force failure 3.10
+              if: matrix.python-version == '3.10'
+              run: exit 1
+
+```
