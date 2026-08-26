@@ -29,16 +29,18 @@ jobs:
               with:
                 driver: docker-container
 
-            - name: Build and push Docker Image on Main Branch Only
-              
-              uses: docker/build-push-action@v7
-              with:
-                context: .
-                push: ${{ github.ref == '/refs/heads/main' }}
-                tags: |
-                    ${{ vars.DOCKER_USERNAME }}/repo:latest
-                    ${{ vars.DOCKER_USERNAME }}/repo:${{ github.sha }}
+           - name: Get short SHA
+             id: short_sha
+             run: echo "sha=${GITHUB_SHA:0:7}" >> "$GITHUB_OUTPUT"
 
+           - name: Build and push Docker Image on Main Branch Only
+             uses: docker/build-push-action@v7
+             with:
+                context: .
+                push: ${{ github.ref == 'refs/heads/main' }}
+                tags: |
+                      ${{ vars.DOCKER_USERNAME }}/repo:latest
+                      ${{ vars.DOCKER_USERNAME }}/repo:${{ steps.short_sha.outputs.sha }}
 ```
 #### Docker Hub link to your image
 https://hub.docker.com/repository/docker/hinaqazi612/repo/general
